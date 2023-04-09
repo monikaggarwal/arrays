@@ -1,0 +1,14 @@
+var findMedianSortedArrays = function(nums1, nums2) {
+    const mergedArr = nums1.concat(nums2);
+    //console.log(mergedArr);
+    mergedArr.sort((a,b) => a - b);
+    //console.log(mergedArr);
+    const temp = Math.floor(mergedArr.length / 2);
+    //console.log(temp);
+    if(mergedArr.length%2==0) {
+        return (mergedArr[temp-1] + mergedArr[temp])/2
+    }
+    else {
+        return mergedArr[temp]
+    }
+};
